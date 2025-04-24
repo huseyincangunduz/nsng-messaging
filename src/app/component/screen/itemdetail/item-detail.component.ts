@@ -7,8 +7,8 @@ import {
 } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { NativeScriptCommonModule } from "@nativescript/angular";
-import { Item } from "./item";
-import { ItemService } from "./item.service";
+import { Item } from "../../../model/item";
+import { ItemService } from "../../../service/item.service";
 import { Frame } from "@nativescript/core";
 
 @Component({

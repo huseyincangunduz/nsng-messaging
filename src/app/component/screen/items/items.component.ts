@@ -4,7 +4,7 @@ import {
   NativeScriptRouterModule,
 } from "@nativescript/angular";
 import { Page } from "@nativescript/core";
-import { ItemService } from "./item.service";
+import { ItemService } from "../../../service/item.service";
 
 @Component({
   selector: "ns-items",
