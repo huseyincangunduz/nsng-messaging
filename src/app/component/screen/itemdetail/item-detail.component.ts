@@ -46,10 +46,12 @@ export class ItemDetailComponent implements OnInit, AfterViewInit {
    */
   constructor() {}
   ngAfterViewInit(): void {
-    const scroll = this.nsScrollView()?.nativeElement;
-    if (scroll) {
-      scroll.scrollToVerticalOffset(scroll.scrollableHeight, false);
-    }
+    setTimeout(() => {
+      const scroll = this.nsScrollView()?.nativeElement;
+      if (scroll) {
+        scroll.scrollToVerticalOffset(scroll.scrollableHeight, false);
+      }
+    }, 200);
   }
 
   ngOnInit(): void {
