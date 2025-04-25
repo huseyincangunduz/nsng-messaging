@@ -1,0 +1,14 @@
+<StackLayout *ngIf="item(); let item" [nsRouterLink]="['/item', item.id]">
+  <FlexboxLayout class="p-2">
+    <Image src="~/assets/khal.jpg" height="50" style="border-radius: 100%" />
+    <StackLayout flexGrow="1" class="ml-2">
+      <Label
+        [text]="item.name"
+        class="text-lg text-gray-500"
+        flexGrow="1"
+      ></Label>
+      <Label [text]="'item.role'"></Label>
+    </StackLayout>
+  </FlexboxLayout>
+  <!-- ></Label> -->
+</StackLayout>

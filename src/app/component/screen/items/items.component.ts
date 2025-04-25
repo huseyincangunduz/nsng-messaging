@@ -5,11 +5,16 @@ import {
 } from "@nativescript/angular";
 import { Page } from "@nativescript/core";
 import { ItemService } from "../../../service/item.service";
+import { PersonItemComponent } from "../../group/person-item/person-item.component";
 
 @Component({
   selector: "ns-items",
   templateUrl: "./items.component.html",
-  imports: [NativeScriptCommonModule, NativeScriptRouterModule],
+  imports: [
+    NativeScriptCommonModule,
+    NativeScriptRouterModule,
+    PersonItemComponent,
+  ],
   schemas: [NO_ERRORS_SCHEMA],
 })
 export class ItemsComponent {
