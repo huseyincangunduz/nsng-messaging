@@ -1,4 +1,4 @@
-<ActionBar title="Details">
+<ActionBar [title]="item().name + ' ile mesajlaşma'">
   <NavigationButton
     text="Geri"
     android.systemIcon="ic_menu_back"
@@ -6,41 +6,21 @@
   />
 </ActionBar>
 
-<DockLayout stretchLastChild="true" backgroundColor="#3c495e">
+<DockLayout stretchLastChild="true">
   <!-- <Label text="left" dock="left" width="40" backgroundColor="#43B3F4" /> -->
   <!-- <Label text="top" dock="top" height="40" backgroundColor="#1089CA" />
   <Label text="right" dock="right" width="40" backgroundColor="#43B3F4" />
   <Label text="bottom" dock="bottom" height="40" backgroundColor="#1089CA" /> -->
   <!-- <Label text="center" backgroundColor="#075B88" />
     -->
+  <app-message-textbox-area dock="bottom"></app-message-textbox-area>
 
-  <FlexboxLayout flexDirection="row" dock="bottom">
-    <Label class="text-xl m-4" [text]="'Textbox ve Gönder butonu'"></Label>
-  </FlexboxLayout>
   <ScrollView flexGrow="1" #NsScrollView>
     <FlexboxLayout flexDirection="column">
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label class="text-xl m-4" [text]="'Önceki mesaj'"></Label>
-      <Label
+      <app-message-item
         *ngFor="let msg of messages()"
-        class="text-xl m-4"
-        [text]="msg.content"
-      ></Label>
+        [item]="msg"
+      ></app-message-item>
     </FlexboxLayout>
   </ScrollView>
 </DockLayout>

@@ -1,0 +1,14 @@
+<FlexboxLayout
+  *ngIf="item(); let _item"
+  class="p-1"
+  [flexDirection]="isSenderIsThisDevice() ? 'row-reverse' : 'row'"
+>
+  <Label
+    class="text-xl m-4 p-2"
+    [text]="_item.content"
+    [borderColor]="isSenderIsThisDevice() ? '#009688' : '#00695C'"
+    [backgroundColor]="isSenderIsThisDevice() ? '#009688' : null"
+    borderWidth="1"
+    borderRadius="2"
+  ></Label>
+</FlexboxLayout>

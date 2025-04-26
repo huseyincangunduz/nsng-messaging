@@ -15,11 +15,17 @@ import { Item } from "../../../model/item";
 import { ItemService } from "../../../service/item.service";
 import { Frame, ScrollView } from "@nativescript/core";
 import { UserMessage } from "../../../model/user-message";
+import { MessageItemComponent } from "../../group/message-item/message-item.component";
+import { MessageTextboxAreaComponent } from "../../group/message-textbox-area/message-textbox-area.component";
 
 @Component({
   selector: "ns-item-detail",
   templateUrl: "./item-detail.component.html",
-  imports: [NativeScriptCommonModule],
+  imports: [
+    NativeScriptCommonModule,
+    MessageItemComponent,
+    MessageTextboxAreaComponent,
+  ],
   schemas: [NO_ERRORS_SCHEMA],
 })
 export class ItemDetailComponent implements OnInit, AfterViewInit {
@@ -30,12 +36,42 @@ export class ItemDetailComponent implements OnInit, AfterViewInit {
 
   messages = signal<UserMessage[]>([
     {
-      from: "Testo",
+      from: "testo",
       content: "Selam Nice yılların olsun",
       date: new Date(2025, 4, 23, 0, 10),
     },
     {
-      from: "Hüseyin",
+      from: "hüseyin",
+      content: "Eyw",
+      date: new Date(2025, 4, 23, 0, 11),
+    },
+    {
+      from: "testo",
+      content: "Selam Nice yılların olsun",
+      date: new Date(2025, 4, 23, 0, 10),
+    },
+    {
+      from: "hüseyin",
+      content: "Eyw",
+      date: new Date(2025, 4, 23, 0, 11),
+    },
+    {
+      from: "testo",
+      content: "Selam Nice yılların olsun",
+      date: new Date(2025, 4, 23, 0, 10),
+    },
+    {
+      from: "hüseyin",
+      content: "Eyw",
+      date: new Date(2025, 4, 23, 0, 11),
+    },
+    {
+      from: "testo",
+      content: "Selam Nice yılların olsun",
+      date: new Date(2025, 4, 23, 0, 10),
+    },
+    {
+      from: "hüseyin",
       content: "Eyw",
       date: new Date(2025, 4, 23, 0, 11),
     },
